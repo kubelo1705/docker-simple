@@ -1,0 +1,5 @@
+com/example/dockerdemo/controller/StudentController.class
+com/example/dockerdemo/service/IStudentService.class
+com/example/dockerdemo/repository/StudentRepository.class
+com/example/dockerdemo/entity/Student.class
+com/example/dockerdemo/service/StudentServiceImp.class

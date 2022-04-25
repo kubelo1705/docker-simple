@@ -1,0 +1,8 @@
+build images:
+-mysql
+-build dockerfile
+
+create network: sudo docker network create -d bridge mybridge
+create mysql container with volume and network: sudo docker run -it --name mysql --network mybridge --volume "exampleVolume":/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+create myweb container with volume and network: sudo docker run -d --name myweb --network mybridge -p 5001:8080 myweb
+view volume location in docker inspect container_mysql

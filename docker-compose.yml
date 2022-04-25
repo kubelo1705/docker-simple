@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=docker
+    ports:
+      - "5001:3306"
+    volumes:
+      - db:/var/lib/mysql
+  app:
+    depends_on:
+      - mysql
+    build: .
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/docker?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+    ports:
+      - "5002:8080"
+volumes:
+  db:

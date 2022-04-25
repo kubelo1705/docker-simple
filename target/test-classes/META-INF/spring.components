@@ -1,0 +1,7 @@
+#
+#Mon Apr 25 10:44:06 ICT 2022
+com.example.dockerdemo.entity.Student=javax.persistence.Entity,javax.persistence.Table
+com.example.dockerdemo.service.StudentServiceImp=org.springframework.stereotype.Component
+com.example.dockerdemo.DockerDemoApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+com.example.dockerdemo.controller.StudentController=org.springframework.stereotype.Component
+com.example.dockerdemo.repository.StudentRepository=org.springframework.stereotype.Component,org.springframework.data.repository.Repository
